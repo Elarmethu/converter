@@ -19,6 +19,7 @@ class Reader():
     def __doc_read__(file_path):
         text = []
         doc = docx.Document(file_path)
+        
         for paragraph in doc.paragraphs:
             text.append(paragraph.text)
         doc_text = '\n'.join(text)
